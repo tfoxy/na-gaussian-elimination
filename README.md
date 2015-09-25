@@ -43,7 +43,7 @@ console.log('solution', system.solution); // [-2, 3, 0]
 
 ## Functions and properties
 
-### GaussianElimination
+### `GaussianElimination`
 
 #### `setEventEmitter(EventEmitter)`
 
@@ -63,7 +63,7 @@ Error emitted (or thrown) when there is an error while solving the system.
 
 Error thrown in the constructor when an option has an invalid value.
 
-### gaussianElimination (instance)
+### `gaussianElimination (instance)`
 
 The methods have the following similarities:
 
