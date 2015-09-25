@@ -10,7 +10,7 @@ Works in [Node.js] and the browser.
 
 ## Example
 
-[Live Demo](http://jsbin.com/nuquga/embed?js,console)
+[Live Demo](http://jsbin.com/nuquga/embed?js,output)
 
 ```js
 // If not executing on node.js and want to listen to events,
