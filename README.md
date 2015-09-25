@@ -2,9 +2,7 @@
 
 [![npm version](http://img.shields.io/npm/v/na-gaussian-elimination.svg)](https://npmjs.org/package/na-gaussian-elimination)
 [![bower version](https://img.shields.io/bower/v/na-gaussian-elimination.svg)](https://github.com/tfoxy/na-gaussian-elimination)
-<!--
 [![build status](https://travis-ci.org/tfoxy/na-gaussian-elimination.svg)](https://travis-ci.org/tfoxy/na-gaussian-elimination)
--->
 
 Solves a [system of linear equations] ([matrix]), using the [Gaussian elimination] algorithm.
 
