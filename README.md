@@ -43,27 +43,27 @@ console.log('solution', system.solution); // [-2, 3, 0]
 
 ## Functions and properties
 
-### GaussianElimination
+### `GaussianElimination`
 
-#### setEventEmitter(EventEmitter)
+#### `setEventEmitter(EventEmitter)`
 
 If you want to use the events in the browser, you must set an [EventEmitter library]
 using the `GaussianElimination.setEventEmitter(EventEmitter)` method.
 
-#### defaultOptions
+#### `defaultOptions`
 
 The options used when no other option is specified in the constructor.
 See [Options section](#Options).
 
-#### SolutionError
+#### `SolutionError`
 
 Error emitted (or thrown) when there is an error while solving the system.
 
-#### OptionsError
+#### `OptionsError`
 
 Error thrown in the constructor when an option has an invalid value.
 
-### gaussianElimination (instance)
+### `gaussianElimination (instance)`
 
 The methods have the following similarities:
 
@@ -74,16 +74,16 @@ The methods have the following similarities:
   * The arguments `matrix` and `result` are modified when solving the system.
   * The methods don't check the dimensions of `matrix` and `result`.
 
-#### solve(matrix, result)
+#### `solve(matrix, result)`
 
 Solves the system and returns an object with the solution property.
 
-#### forwardElimination(matrix, result)
+#### `forwardElimination(matrix, result)`
 
 Reduces the given system to row echelon form 
 (without the condition that the leading coefficient must be 1).
 
-#### backSubstitution(matrix, result)
+#### `backSubstitution(matrix, result)`
 
 Finds a solution for the system.
 
