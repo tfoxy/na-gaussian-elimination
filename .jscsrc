@@ -3,5 +3,6 @@
   "disallowMultipleLineBreaks": null,
   "disallowMultipleVarDecl": null,
   "disallowTrailingWhitespace": null,
-  "maximumLineLength": 100
+  "maximumLineLength": 100,
+  "excludeFiles": ["node_modules", "**/*.min.js"]
 }
