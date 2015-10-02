@@ -338,7 +338,8 @@
       }
 
       this.emit('substitutionOperationEnd', {
-        i: i
+        i: i,
+        value: resultValue
       });
     }
 
