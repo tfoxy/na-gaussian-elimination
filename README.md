@@ -1,12 +1,13 @@
 # na-gaussian-elimination
 
 [![npm version](http://img.shields.io/npm/v/na-gaussian-elimination.svg)](https://npmjs.org/package/na-gaussian-elimination)
-[![bower version](https://img.shields.io/bower/v/na-gaussian-elimination.svg)](https://github.com/tfoxy/na-gaussian-elimination)
+[![bower version](https://img.shields.io/bower/v/na-gaussian-elimination.svg)](https://github.com/tfoxy/na-gaussian-elimination/releases)
 [![build status](https://travis-ci.org/tfoxy/na-gaussian-elimination.svg)](https://travis-ci.org/tfoxy/na-gaussian-elimination)
 
 Solves a [system of linear equations] ([matrix]), using the [Gaussian elimination] algorithm.
 
 Works in [Node.js] and the browser.
+
 
 ## Example
 
@@ -41,51 +42,47 @@ var system = gaussianElimination.solve(matrix, result);
 console.log('solution', system.solution); // [-2, 3, 0]
 ```
 
-## Functions and properties
 
-### GaussianElimination
+## Functions and properties of GaussianElimination
 
-#### `setEventEmitter(EventEmitter)`
+#### `.setEventEmitter(EventEmitter)`
 
 If you want to use the events in the browser, you must set an [EventEmitter library]
 using the `GaussianElimination.setEventEmitter(EventEmitter)` method.
 
-#### `defaultOptions`
+#### `.defaultOptions`
 
-The options used when no other option is specified in the constructor.
+Used when no other option is specified in the constructor.
 See [Options section](#Options).
 
-#### `SolutionError`
+#### `.SolutionError`
 
 Error emitted (or thrown) when there is an error while solving the system.
 
-#### `OptionsError`
+#### `.OptionsError`
 
 Error thrown in the constructor when an option has an invalid value.
 
-### gaussianElimination (instance)
+#### `#solve(matrix, result)`
 
-The methods have the following similarities:
+Solves the system and returns an object with the solution property.
 
   * `matrix` can be rectangular.
   * The values of `matrix` and `result` must be objects with the following methods: 
     `sub`, `times`, `div`, `isZero`, `abs`, `cmp`.
     This methods are all present in the [bignumber.js library].
-  * The arguments `matrix` and `result` are modified when solving the system.
-  * The methods don't check the dimensions of `matrix` and `result`.
+  * `matrix` and `result` are modified when solving the system.
+  * It doesn't check the dimensions of `matrix` and `result`.
 
-#### `solve(matrix, result)`
-
-Solves the system and returns an object with the solution property.
-
-#### `forwardElimination(matrix, result)`
+#### `#forwardElimination(matrix, result)`
 
 Reduces the given system to row echelon form 
 (without the condition that the leading coefficient must be 1).
 
-#### `backSubstitution(matrix, result)`
+#### `#backSubstitution(matrix, result)`
 
 Finds a solution for the system.
+
 
 ## Options
 
