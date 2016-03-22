@@ -65,7 +65,7 @@ Error thrown in the constructor when an option has an invalid value.
 
 #### `#solve(matrix, result)`
 
-Solves the system and returns an object with the solution property.
+Solves the system and returns an object with the `solution` property.
 
   * `matrix` can be rectangular.
   * The values of `matrix` and `result` must be objects with the following methods: 
@@ -87,12 +87,12 @@ Finds a solution for the system.
 ## Options
 
   * `pivoting`: one of `none`, `avoid zero`, `partial`, `scaled` and `complete`.
-    By default it is `'partial'`.
+    Default: `'partial'`.
   * `lu`: if it is truthy, then the matrix is transformed into an LU matrix.
     If not, then the lower triangle of the matrix is filled with zeroes.
-    By default it is `false`.
+    Default: `false`.
   * `zero`: the value used to represent a zero. Only used when `lu` is falsy.
-    By default it is `0`.
+    Default: `0`.
 
 
 [system of linear equations]: https://en.wikipedia.org/wiki/System_of_linear_equations
