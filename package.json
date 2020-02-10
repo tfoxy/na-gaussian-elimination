@@ -39,7 +39,8 @@
     "jshint": "^2.8.0",
     "mocha": "^2.3.2",
     "sinon": "^1.16.1",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "uglify-js": "^3.7.7"
   },
   "author": "Tomás Fox <tomas.c.fox@gmail.com>",
   "license": "MIT"
