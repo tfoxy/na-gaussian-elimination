@@ -69,7 +69,7 @@ Solves the system and returns an object with the `solution` property.
 
   * `matrix` can be rectangular.
   * The values of `matrix` and `result` must be objects with the following methods: 
-    `sub`, `times`, `div`, `isZero`, `abs`, `cmp`.
+    `minus`, `times`, `div`, `isZero`, `abs`, `comparedTo`.
     This methods are all present in the [bignumber.js library].
   * `matrix` and `result` are modified when solving the system.
   * It doesn't check the dimensions of `matrix` and `result`.

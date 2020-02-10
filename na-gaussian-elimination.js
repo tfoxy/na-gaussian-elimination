@@ -1,7 +1,7 @@
 /*!
  * na-gaussian-elimination
  * @see https://github.com/tfoxy/na-gaussian-elimination
- * @version 0.0.4
+ * @version 1.0.0
  * @author Tomás Fox <tomas.c.fox@gmail.com>
  * @license MIT
  */
@@ -10,7 +10,7 @@
 
 /**
  * Operations needed:
- * sub, times, div, isZero, abs, cmp
+ * minus, times, div, isZero, abs, comparedTo
  */
 (function(root, factory) {
   'use strict';
@@ -257,11 +257,11 @@
 
         for (var j = k + 1; j < n; j++) {
           product = mIK.times(matrix[k][j]);
-          row[j] = row[j].sub(product);
+          row[j] = row[j].minus(product);
         }
 
         product = mIK.times(result[k]);
-        result[i] = result[i].sub(product);
+        result[i] = result[i].minus(product);
 
         this.emit('eliminationReduceRowEnd', reduceRowProps);
       }
@@ -323,7 +323,7 @@
       } else {
         for (j = i + 1; j < row.length; j++) {
           var product = row[j].times(result[j]);
-          resultValue = resultValue.sub(product);
+          resultValue = resultValue.minus(product);
         }
         if (rowValue.isZero()) {
           if (resultValue.isZero()) {
@@ -360,7 +360,7 @@
         }
 
         var solutionValue = resultValue.div(rowValue);
-        if (solutionValue.cmp(lastSolution) !== 0) {
+        if (solutionValue.comparedTo(lastSolution) !== 0) {
           throw new SolutionError('There is no solution for the system');
         }
       }
@@ -431,7 +431,7 @@
     for (var k = i + 1; k < matrix.length; k++) {
       var value = matrix[k][i].abs();
 
-      if (value.cmp(maxValue) > 0) {
+      if (value.comparedTo(maxValue) > 0) {
         maxValue = value;
         maxValueIndex = k;
       }
@@ -447,7 +447,7 @@
     for (var k = i + 1; k < matrix.length; k++) {
       var value = getScaledValue(matrix[k], i);
 
-      if (value.cmp(maxValue) > 0) {
+      if (value.comparedTo(maxValue) > 0) {
         maxValue = value;
         maxValueIndex = k;
       }
@@ -473,7 +473,7 @@
     for (var j = i + 1; j < row.length; j++) {
       var value = row[j].abs();
 
-      if (value.cmp(maxValue) > 0) {
+      if (value.comparedTo(maxValue) > 0) {
         maxValue = value;
       }
     }
@@ -490,7 +490,7 @@
     for (i = k + 1; i < m; i++) {
       value = matrix[i][j].abs();
 
-      if (value.cmp(maxValue) > 0) {
+      if (value.comparedTo(maxValue) > 0) {
         maxValue = value;
         maxValueIndexes = {i: i, j: j};
       }
@@ -500,7 +500,7 @@
       for (j = k + 1; j < n; j++) {
         value = matrix[i][j].abs();
 
-        if (value.cmp(maxValue) > 0) {
+        if (value.comparedTo(maxValue) > 0) {
           maxValue = value;
           maxValueIndexes = {i: i, j: j};
         }

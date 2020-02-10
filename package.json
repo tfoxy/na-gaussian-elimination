@@ -8,6 +8,11 @@
     "min": "uglifyjs na-gaussian-elimination.js --comments '/^!/' --compress --mangle -o na-gaussian-elimination.min.js",
     "jshint": "jshint . --exclude-path=.gitignore --exclude='**/*.min.js'"
   },
+  "files": [
+    "na-gaussian-elimination.js",
+    "na-gaussian-elimination.min.js",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tfoxy/na-gaussian-elimination"
@@ -28,7 +33,7 @@
     "solver"
   ],
   "devDependencies": {
-    "bignumber.js": "^2.0.7",
+    "bignumber.js": "^9.0.0",
     "chai": "^3.2.0",
     "jscs": "^2.1.1",
     "jshint": "^2.8.0",
