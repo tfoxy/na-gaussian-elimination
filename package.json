@@ -35,9 +35,9 @@
   "devDependencies": {
     "bignumber.js": "^9.0.0",
     "chai": "^3.2.0",
-    "jscs": "^2.1.1",
+    "jscs": "^3.0.7",
     "jshint": "^2.8.0",
-    "mocha": "^2.3.2",
+    "mocha": "^10.1.0",
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^3.7.7"
